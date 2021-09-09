@@ -136,13 +136,6 @@ const displayLastItemDialog = function (lastItem) {
   document.getElementById("showSalary").innerText = d3.format(",.0f")(
     lastItem.salary
   );
-  dlg.dialog({
-    buttons: {
-      Ok: function () {
-        $(this).dialog("close");
-      },
-    },
-  });
 };
 
 var showDataError = function (name, salary) {
@@ -152,14 +145,6 @@ var showDataError = function (name, salary) {
   toggleErrorMessage("#newName", name, "Who the hell you are talking about!");
   toggleErrorMessage("#newSalary", salary, "How much that guy make!");
 
-  dlg.dialog({
-    width: 600,
-    buttons: {
-      Ok: function () {
-        $(this).dialog("close");
-      },
-    },
-  });
 };
 
 function toggleErrorMessage(selector, value, msg) {
@@ -178,13 +163,6 @@ const showRecordCount = function (data) {
 
   document.getElementById("numberOfRecords").innerText = data.length;
 
-  dlg.dialog({
-    buttons: {
-      Ok: function () {
-        $(this).dialog("close");
-      },
-    },
-  });
 };
 
 const anotherRecordCountHandler = function anotherRecordCountHandler(e) {
